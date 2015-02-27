@@ -7,6 +7,7 @@ body{
 	margin:0;
 	padding:0;
 	overflow:auto;
+	color:#FFF8DC;
 }
 
 #bodyCenter{
@@ -21,7 +22,7 @@ body{
 }
 #bodyCenter >div:first-child{
 	width: 40px;
-	height: 100px;
+	min-height: 100px;
 	background:url("elements/leftBorderPageContainer.jpg") repeat-y;
 	float:left;
 	margin-top:-50px
@@ -60,17 +61,55 @@ body{
 	width:73.57%;
 	height:57px;
 	background:url("elements/menuBar.jpg");
-	margin:0 auto 0 auto;
+	margin:-1px auto 0 auto;
+	line-height:57px;
+	padding-top: 1px;
+	overflow:hidden;
+	
 }
-#menuBar div:first-child{
+#menuBar >div:first-child{
 	background:url("elements/menuBarLeft.jpg") no-repeat;
 	width:7px;
 	height:57px;
 	float: left;
 }
-#menuBar div:last-child{
+#menuBar>div:nth-child(2){
 	background:url("elements/menuBarRight.jpg") no-repeat;
 	width:7px;
 	height:57px;
 	float:right;
+}
+.buttons{
+	min-width:100px;
+	height:41px;
+	margin-top:7px;
+	float:left;
+}
+.regularButton{
+	width:6px;
+	height:41px;
+}
+.buttonLeft{
+	float:left;
+}
+.buttonRight{
+	float:left;
+}
+.buttonCenter{
+	width:auto;
+	float:left;
+	padding: 0 20px 0 20px;
+	line-height:40px;
+}
+.buttonLeft.regularButton{
+	background:url("elements/regularButtonLeftBorder.jpg");
+}
+.buttonRight.regularButton{
+	background:url("elements/regularButtonRightBorder.jpg");
+}
+.buttonCenter.regularButton{
+	background:url("elements/regularButtonCenter.jpg");
+}
+#menuBar>div:nth-child(3){
+	margin-left:15px;
 }

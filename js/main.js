@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var noPading = $("#bodyCenter");
-	
+	var button = $(".buttons");
+	var buttonsName = ["home","foo","temp","contact us", "about"];
 	
 	$("#bodyCenter>div:first-child").css("height",
 	noPading.height()+
@@ -12,6 +13,12 @@ $(document).ready(function(){
 	parseInt(noPading.css("padding-top"))+
 	parseInt(noPading.css("padding-bottom")));
 	
+	$.each(button, function(i,v){
+		$('<div class="buttonLeft regularButton"></div><div class="buttonCenter regularButton"></div><div class="buttonRight regularButton"></div>').appendTo(v);
+		$(v).find(":nth-child(2)").html(buttonsName[i]);
+		
+		
+	});
 	
 	
 	
