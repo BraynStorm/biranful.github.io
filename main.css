@@ -1,0 +1,63 @@
+@font-face {
+         font-family: OpenSans;
+         src: url('fonts/OpenSans-Regular.ttf');
+}
+body{
+	background:url("elements/body.jpg");
+	margin:0;
+	padding:0;
+	overflow:auto;
+}
+.bodyStyle{
+	position:relative;
+}
+#bodyCenter{
+	width:84.5%;
+	min-width:1100px;
+	min-height:705px;
+	background:url("elements/pageContainer.jpg");
+	margin-left:113.5px;
+	opacity:0.79;
+	padding-top:50px;
+	padding-bottom: 100px;
+	
+}
+#content{
+	width:72.62%;
+	min-height:525px;
+	background:url("elements/content.jpg");
+	margin:75px auto 0 auto;
+	min-width:800px;
+	padding:8.76px;
+	font-family: OpenSans;
+}
+#line{
+	width:73.57%;
+	height:50px;
+	margin:-28px auto 20px auto;
+}
+
+#logoStamp{
+	width:100px;
+	height:50px;
+	background:#FFF;
+}
+
+#menuBar{
+	width:73.57%;
+	height:57px;
+	background:url("elements/menuBar.jpg");
+	margin:0 auto 0 auto;
+}
+#menuBar div:first-child{
+	background:url("elements/menuBarLeft.jpg") no-repeat;
+	width:7px;
+	height:57px;
+	float: left;
+}
+#menuBar div:last-child{
+	background:url("elements/menuBarRight.jpg") no-repeat;
+	width:7px;
+	height:57px;
+	float:right;
+}
