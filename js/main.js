@@ -20,6 +20,9 @@ $(document).ready(function(){
 		
 	});
 	
+	$(".buttons").width((parseInt($("#menuBar").width()) / $(".buttons").length)-9);
+	$("#menuBar>div:last-child").width(parseInt($(".buttons").width())+2);
+	$(".buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2);
 	
 	
 	

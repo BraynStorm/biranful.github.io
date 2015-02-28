@@ -80,10 +80,11 @@ body{
 	float:right;
 }
 .buttons{
-	min-width:100px;
 	height:41px;
 	margin-top:7px;
 	float:left;
+	margin-left:5px;
+	text-align:center;
 }
 .regularButton{
 	width:6px;
@@ -96,7 +97,6 @@ body{
 	float:left;
 }
 .buttonCenter{
-	width:auto;
 	float:left;
 	padding: 0 20px 0 20px;
 	line-height:40px;
@@ -111,5 +111,8 @@ body{
 	background:url("elements/regularButtonCenter.jpg");
 }
 #menuBar>div:nth-child(3){
-	margin-left:15px;
+	margin-left:5px;
+}
+#menuBar>div:last-child{
+	margin-right:4px;
 }
