@@ -83,14 +83,23 @@ body{
 	padding-top: 1px;
 	margin-top:-1px;
 }
+/*button: inactive/non-hover*/
 .buttons{
 	height:41px;
 	margin-top:7px;
 	float:left;
 	margin-left:5px;
-	text-align:center;
+	text-align:center;	
 }
 .regularButton{
+	width:6px;
+	height:41px;
+}
+.hoverButton{
+	width:6px;
+	height:41px;
+}
+.activeButton{
 	width:6px;
 	height:41px;
 }
@@ -104,6 +113,10 @@ body{
 	float:left;
 	padding: 0 20px 0 20px;
 	line-height:40px;
+	-webkit-user-select: none;    
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	cursor:pointer;
 }
 .buttonLeft.regularButton{
 	background:url("elements/regularButtonLeftBorder.jpg");
@@ -119,4 +132,24 @@ body{
 }
 #menuBar>div:last-child{
 	margin-right:4px;
+}
+/* button:hover*/
+.buttonLeft.hoverButton{
+	background:url("elements/hoverButtonLeftBorder.jpg");
+}
+.buttonRight.hoverButton{
+	background:url("elements/hoverButtonRightBorder.jpg");
+}
+.buttonCenter.hoverButton{
+	background:url("elements/hoverButtonCenter.jpg");
+}
+/*button:active*/
+.buttonLeft.activeButton{
+	background:url("elements/activeButtonLeft.jpg");
+}
+.buttonRight.activeButton{
+	background:url("elements/activeButtonRight.jpg");
+}
+.buttonCenter.activeButton{
+	background:url("elements/activeButtonCenter.jpg");
 }

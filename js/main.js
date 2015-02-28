@@ -1,28 +1,65 @@
 $(document).ready(function(){
 	var noPading = $("#bodyCenter");
 	var button = $(".buttons");
-	var buttonsName = ["home","foo","temp","contact us", "about"];
+	var buttonsName = [
+		{name:"home",link:"http://stackoverflow.com"},
+		{name:"foo",link:"https://www.youtube.com/watch?v=nq5Jr_iZsLQ"},
+		{name:"temp",link:"http://leagueoflegends.wikia.com/wiki/Tryndamere/SkinsTrivia"},
+		{name:"contact us",link:"http://api.jquery.com/mouseup/"},
+		{name:"about",link:"https://www.google.bg/?gfe_rd=cr&ei=vTvyVIC3CMqDVICxgYgF"}
+	];
 	
+	//stylize left border of the bodyCenter
 	$("#bodyCenter>div:first-child").css("height",
 	noPading.height()+
 	parseInt(noPading.css("padding-top"))+
 	parseInt(noPading.css("padding-bottom")));
 	
+	//stylize right border of the bodyCenter
 	$("#bodyCenter>div:nth-child(2)").css("height",
 	noPading.height()+
 	parseInt(noPading.css("padding-top"))+
 	parseInt(noPading.css("padding-bottom")));
 	
+	//stylize buttons
 	$.each(button, function(i,v){
 		$('<div class="buttonLeft regularButton"></div><div class="buttonCenter regularButton"></div><div class="buttonRight regularButton"></div>').appendTo(v);
-		$(v).find(":nth-child(2)").html(buttonsName[i]);
-		
-		
+		$(v).find(":nth-child(2)").html(buttonsName[i].name);
 	});
 	
 	$(".buttons").width((parseInt($("#menuBar").width()) / $(".buttons").length)-9);
 	$(".buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2);
 	$("#menuBar>div:last-child .buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2);
+	
+	//button:hover
+	button.hover(function(){
+		$.each($(this).children(), function(i,v){
+			$(v).removeClass("regularButton").addClass("hoverButton");			
+		});
+	},function(){
+		$.each($(this).children(), function(i,v){
+			$(v).removeClass("hoverButton").addClass("regularButton");			
+		});
+	});
+	
+	//button:active
+	button.on('mousedown',function(){
+		event.preventDefault();
+		$.each($(this).children(), function(i,v){
+			$(v).removeClass("hoverButton").addClass("activeButton");
+		});	
+	}).on('mouseup',function(){
+		event.preventDefault();
+		$.each($(this).children(), function(i,v){
+			$(v).removeClass("activeButton").addClass("hoverButton");
+		});	
+		for(var i = 0; i < buttonsName.length; i++){
+			if(buttonsName[i].name===$(this).find(".buttonCenter").html()){
+				window.location.href=buttonsName[i].link;
+			}
+		}
+		
+	});
 	
 	
 	
