@@ -8,6 +8,7 @@ body{
 	padding:0;
 	overflow:auto;
 	color:#FFF8DC;
+	font-family: OpenSans;
 }
 
 #bodyCenter{
@@ -43,7 +44,6 @@ body{
 	margin:75px auto 0 auto;
 	min-width:800px;
 	padding:8.76px;
-	font-family: OpenSans;
 }
 #line{
 	width:73.57%;
