@@ -72,12 +72,16 @@ body{
 	width:7px;
 	height:57px;
 	float: left;
+	padding-top: 1px;
+	margin-top:-1px;
 }
 #menuBar>div:nth-child(2){
 	background:url("elements/menuBarRight.jpg") no-repeat;
 	width:7px;
 	height:57px;
 	float:right;
+	padding-top: 1px;
+	margin-top:-1px;
 }
 .buttons{
 	height:41px;
