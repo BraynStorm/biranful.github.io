@@ -128,10 +128,10 @@ body{
 	background:url("elements/regularButtonCenter.jpg");
 }
 #menuBar>div:nth-child(3){
-	margin-left:6px;
+
 }
 #menuBar>div:last-child{
-	margin-right:4px;
+
 }
 /* button:hover*/
 .buttonLeft.hoverButton{
