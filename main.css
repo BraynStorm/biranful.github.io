@@ -153,3 +153,15 @@ body{
 .buttonCenter.activeButton{
 	background:url("elements/activeButtonCenter.jpg");
 }
+/* TOOLTIP */
+#tooltip{
+	width: auto;
+	height: 20px;
+	font-size: 9pt;
+	background:rgba(255,255,255,0.7);
+	color:#000;
+	position:fixed;
+	display:none;
+	border: 1px solid #000;
+	padding: 2px;
+}

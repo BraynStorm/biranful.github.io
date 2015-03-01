@@ -9,6 +9,16 @@ $(document).ready(function(){
 		{name:"about",link:"https://www.google.bg/?gfe_rd=cr&ei=vTvyVIC3CMqDVICxgYgF"}
 	];
 	
+	
+	//trying to fix ACTIVE DRAG button 
+	var butHomePosition = $("#menuBar>div:nth-child(3)").position();
+	console.log(butHomePosition.left - 10);
+	// did NOT WORK
+	
+	
+	
+    
+	
 	//stylize left border of the bodyCenter
 	$("#bodyCenter>div:first-child").css("height",
 	noPading.height()+
@@ -34,24 +44,43 @@ $(document).ready(function(){
 	//button:hover
 	button.hover(function(){
 		$.each($(this).children(), function(i,v){
-			$(v).removeClass("regularButton").addClass("hoverButton");			
+			$(v).removeClass("regularButton activeButton").addClass("hoverButton");				
 		});
+		setTimeout(function(){
+			$("#tooltip").css("display", "block");
+		},1000);
+		for(var i = 0; i < buttonsName.length; i++){
+			if(buttonsName[i].name===$(this).find(".buttonCenter").html()){
+				$("#tooltip").html(buttonsName[i].link);
+			}
+			
+		}
+		
 	},function(){
 		$.each($(this).children(), function(i,v){
-			$(v).removeClass("hoverButton").addClass("regularButton");			
+			$(v).removeClass("hoverButton activeButton").addClass("regularButton");			
+		});
+		$("#tooltip").css("display", "none")
+	});
+		
+	$(document.body).mousemove(function(){
+		var x = event.clientX;
+		var y = event.clientY;
+		$("#tooltip").css({
+			top: y + 15,
+			left: x + 20
 		});
 	});
-	
 	//button:active
 	button.on('mousedown',function(){
 		event.preventDefault();
 		$.each($(this).children(), function(i,v){
-			$(v).removeClass("hoverButton").addClass("activeButton");
+			$(v).removeClass("hoverButton regularButton").addClass("activeButton");
 		});	
 	}).on('mouseup',function(){
 		event.preventDefault();
 		$.each($(this).children(), function(i,v){
-			$(v).removeClass("activeButton").addClass("hoverButton");
+			$(v).removeClass("activeButton regularButton").addClass("hoverButton");
 		});	
 		for(var i = 0; i < buttonsName.length; i++){
 			if(buttonsName[i].name===$(this).find(".buttonCenter").html()){
@@ -60,7 +89,10 @@ $(document).ready(function(){
 		}
 		
 	});
-	
+	$(document.body).mousemove(function(){
+		var coords = "X coords: " + event.clientX + ", Y coords: " + event.clientY;
+		//console.log(coords);
+	});
 	
 	
 });
