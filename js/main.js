@@ -42,11 +42,12 @@ $(document).ready(function(){
 	$("#menuBar>div:last-child .buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2);
 	
 	//button:hover
+	var timeout;
 	button.hover(function(){
 		$.each($(this).children(), function(i,v){
 			$(v).removeClass("regularButton activeButton").addClass("hoverButton");				
 		});
-		setTimeout(function(){
+		timeout = setTimeout(function(){
 			$("#tooltip").css("display", "block");
 		},1000);
 		for(var i = 0; i < buttonsName.length; i++){
@@ -60,6 +61,7 @@ $(document).ready(function(){
 		$.each($(this).children(), function(i,v){
 			$(v).removeClass("hoverButton activeButton").addClass("regularButton");			
 		});
+		clearTimeout(timeout);
 		$("#tooltip").css("display", "none")
 	});
 		
