@@ -6,7 +6,7 @@ $(document).ready(function(){
 		{name:"Бижута",link:"https://www.youtube.com/watch?v=nq5Jr_iZsLQ"},
 		{name:"Аксесоари",link:"http://leagueoflegends.wikia.com/wiki/Tryndamere/SkinsTrivia"},
 		{name:"Информация",link:"http://api.jquery.com/mouseup/"},
-		{name:"Контакти",link:"https://www.google.bg/?gfe_rd=cr&ei=vTvyVIC3CMqDVICxgYgF"}
+		{name:"Контакти",link:"https://www.google.bg"}
 	];
 	
 	
@@ -26,8 +26,8 @@ $(document).ready(function(){
 	});
 	
 	$(".buttons").width((parseInt($("#menuBar").width()) / $(".buttons").length)-0.89);
-	
-	//$(".buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2);
+
+	//$(".buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2)a;
 	//$("#menuBar>div:last-child .buttonCenter").width(parseInt($(".buttons").width())-41-parseInt($(".buttonLeft").width())*2);
 	
 	//button:hover

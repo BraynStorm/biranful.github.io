@@ -26,7 +26,7 @@ body{
 	margin: 25px 0 0 150px;
 }
 #menuBar{
-	width:78.03%;
+	width:78.00%;
 	height:60px;
 	background:#6b1d6b;
 	margin: 25px 0 0 150px;
@@ -34,7 +34,7 @@ body{
 	border-top-left-radius: 22px;
 }
 #content{
-	width:78.03%;
+	width:78.00%;
 	min-height:552px;
 	background:url("elements/content.jpg");
 	margin: 0 0 50px 150px;
