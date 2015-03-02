@@ -2,11 +2,11 @@ $(document).ready(function(){
 	var noPading = $("#bodyCenter");
 	var button = $(".buttons");
 	var buttonsName = [
-		{name:"home",link:"http://stackoverflow.com"},
-		{name:"foo",link:"https://www.youtube.com/watch?v=nq5Jr_iZsLQ"},
-		{name:"temp",link:"http://leagueoflegends.wikia.com/wiki/Tryndamere/SkinsTrivia"},
-		{name:"contact us",link:"http://api.jquery.com/mouseup/"},
-		{name:"about",link:"https://www.google.bg/?gfe_rd=cr&ei=vTvyVIC3CMqDVICxgYgF"}
+		{name:"Начало",link:"http://stackoverflow.com"},
+		{name:"Бижута",link:"https://www.youtube.com/watch?v=nq5Jr_iZsLQ"},
+		{name:"Аксесоари",link:"http://leagueoflegends.wikia.com/wiki/Tryndamere/SkinsTrivia"},
+		{name:"Информация",link:"http://api.jquery.com/mouseup/"},
+		{name:"Контакти",link:"https://www.google.bg/?gfe_rd=cr&ei=vTvyVIC3CMqDVICxgYgF"}
 	];
 	
 	
