@@ -9,17 +9,12 @@
 		<script src="js/main.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="topOutput"></div>
-		<div id="topBorder"></div>
-		<div id="logo"></div>
-		<div id="menuBar">
-			<div class="buttons"></div>
-			<div class="buttons"></div>
-			<div class="buttons"></div>
-			<div class="buttons"></div>
-			<div class="buttons"></div>
-		</div>
-		<div id="tooltip"></div>
-		<div id="content"></div>
+		<form id="login" action="checkLogin.php" method="post">
+			<span>Име:</span>
+			<input type="text" name="username"/>
+			<span>Парола:</span>
+			<input type="password" name="password"/>
+			<input type="submit" name="submit" value="вход"/>
+		</form>
 	</body>
 </html>

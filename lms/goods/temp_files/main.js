@@ -6,7 +6,7 @@ $(document).ready(function(){
 		{name:"Начало",link:"index.php"},
 		{name:"Бижута",link:"jewelry.php"},
 		{name:"Аксесоари",link:"#"},
-		{name:"Информация",link:"information.php"},
+		{name:"Информация",link:"#"},
 		{name:"Контакти",link:"#"}
 	];
 	
@@ -18,11 +18,15 @@ $(document).ready(function(){
 			//return goods information
 			$.each(result, function(i,v){
 				$('<div class="article"><img class="images" src="goods/'+ v.id +'.jpg" /><div class="articleTitle">'+v.articleTitle+'</div></div>').appendTo($("#jewelryContent"));
-				//fix - image on load
-				$("#jewelryContent>div:last-child>.images").on('load',function(){
+				$("#jewelryContent:last-child .images").on('onload',function(){
 					afterImageLoad($(this));
+					
 				});
 			});
+			//images width onload="javascript: afterImageLoad('++');"
+			//$.each($(".images"),function(i,v){
+				
+			//});
 			//image :HOVER
 			$(".images").hover(function(){
 					$.each($(this), function(i,v){
@@ -37,8 +41,13 @@ $(document).ready(function(){
 			$(".images").on('mouseup',function(){
 				event.preventDefault();
 				var THIS = $(this);
-				var x = THIS.attr("src").split(".");
-				window.location.href="goods.php?id="+(x[0].substr(6));
+				$.each(result, function(i,v){
+					var x = THIS.attr("src").split(".");
+					if(x[0].substr(6)===v.id){
+						window.location.href=v.link;
+					}
+					//console.log(x[0].substr(6));
+				});
 				
 			});
 			

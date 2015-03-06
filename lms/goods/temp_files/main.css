@@ -15,19 +15,6 @@ p{
 	height:25px;
 	background:url("elements/topOutput.jpg");
 	margin:0;
-	line-height:25px;
-}
-#addButton{
-	float:right;
-	width:75px;
-	font-size:11pt;
-	margin: 0 auto;
-}
-#login{
-	width:44%;
-}
-.addStockField{
-	width:20%;
 }
 #topBorder{
 	width:100%;
@@ -48,7 +35,7 @@ p{
 	border-top-right-radius: 22px;
 	border-top-left-radius: 22px;
 }
-.content{
+#content{
 	width:78.00%;
 	min-height:552px;
 	background:url("elements/content.jpg");
@@ -92,6 +79,13 @@ p{
 	box-shadow: inset 0px 0px 69px 0px rgba(0,0,0,0.75);
 	
 }
+#jewelryContent{
+	width:78.00%;
+	min-height:552px;
+	background:url("elements/content.jpg");
+	margin: 0 0 50px 150px;
+	padding:25px 0 0 0;
+}
 .article{
 	width:200px;
 	padding:20px;
@@ -108,16 +102,10 @@ p{
 	width:200px;
 	text-align:center;
 }
-.goodsName{
-	width:150px;
-	font-size:20pt;
-}
-.goodsImages{
-	width:40%;
-	height:383px;
-	float:left;
-}
-.goodsDescription{
-	max-width:600px;
-	float:right;
+#goodsContent{
+	width:78.00%;
+	min-height:552px;
+	background:url("elements/content.jpg");
+	margin: 0 0 50px 150px;
+	padding:25px 0 0 0;
 }
