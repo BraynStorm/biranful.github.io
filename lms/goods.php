@@ -21,7 +21,7 @@
 			
 			if(isset($result)){
 			 ?>
-				<div class="goodsName"><?php  echo $result["name"]; ?></div>
+				<div class="goodsName"><?php  echo $result["articleTitle"]; ?></div>
 				<img class="goodsImages" src="goods/<?php echo $result["id"]; ?>.jpg"/>
 				<div class="goodsDescription"><?php  echo $result["description"]; ?></div>
 				<div class="goodsPrice"><?php  echo $result["price"]; ?></div>

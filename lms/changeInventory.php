@@ -7,8 +7,6 @@
 			<fieldset class="addStockField">
 				<legend>Добави продукт</legend>
 				<p>Име:</p>
-				<input type="text" name="stockName_add"/>
-				<p>Заглавие:</p>
 				<input type="text" name="stockTitle_add"/>
 				<p>Описание:</p>
 				<input type="text" name="stockDescription_add"/>
