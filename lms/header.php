@@ -1,3 +1,10 @@
+<?php 
+	if(session_status() == PHP_SESSION_NONE){
+    session_start();
+	$_SESSION["logged"] = false;
+	}
+		
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +17,22 @@
 </head>
 <body>
 		<div id="topOutput">
-			<div id="addButton">
-				<a href="loginForm.php">Добавяне</a>
-			</div>
+			<?php if(!$_SESSION["logged"]){ ?>
+				<form id="login" action="loginForm.php" method="post">
+					<input type="submit" name="submit" value="вход" class="headerButtons"/>
+				</form>
+			<?php } ?>
+			<?php if($_SESSION["logged"]){ ?>
+				<div id="logout">
+					<a href="logout.php"><input type="button" value="Изход" class="headerButtons"/></a>
+				</div>
+				<div id="changeInv">
+					<a href="changeInventory.php"><input type="button" value="Добавяне" class="headerButtons"/></a>
+				</div>
+				<div id="orders">
+					<a href="orders.php"><input type="button" value="Поръчки" class="headerButtons"/></a>
+				</div>
+			<?php } ?>
 		</div>
 		<div id="topBorder"></div>
 		<div id="logo"></div>

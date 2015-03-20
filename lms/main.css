@@ -1,6 +1,6 @@
 @font-face {
-         font-family: OpenSans;
-         src: url('fonts/OpenSans-Regular.ttf');
+    font-family: OpenSans;
+    src: url('fonts/OpenSans-Regular.ttf');
 }
 body{
 	background:#390f39;
@@ -23,8 +23,25 @@ p{
 	font-size:11pt;
 	margin: 0 auto;
 }
-#login{
-	width:44%;
+#loginButton{
+	float:left;
+	padding:5px 15px;
+	background:#d0d0d0;
+	border:0 none;
+	cursor:pointer;
+	border-radius: 5px;
+	margin-top:4px;
+}
+#changeInv{
+	float:right;
+	margin-left:15px;
+}
+#logout{
+	float:right;
+	margin-left:15px;
+}
+#orders{
+	float:right;
 }
 .addStockField{
 	width:20%;
@@ -108,16 +125,103 @@ p{
 	width:200px;
 	text-align:center;
 }
+#container{
+	width:95%;
+	margin: 0 auto;
+	padding:0;
+}
+#goodsContent{
+	padding-top:10px;
+}
 .goodsName{
-	width:150px;
+	width:100%;
 	font-size:20pt;
+	text-align:center;
+	color:#4A1A4A;
+	border-radius: 22px 22px 22px 22px;
+	border: 2px solid #5c265c;
+	
 }
 .goodsImages{
-	width:40%;
-	height:383px;
-	float:left;
+	max-height:383px;
+	border-radius: 22px 22px 22px 22px;
+	border: 2px solid #5c265c;
+	
 }
 .goodsDescription{
-	max-width:600px;
+	width:400px;
+	padding: 5px 8px 5px 8px;
+	margin-top:10px;
 	float:right;
+	color:#4A1A4A;
+	border-radius: 22px 22px 22px 22px;
+	border: 2px solid #5c265c;
+}
+.goodsPrice{
+	width:5%;
+	height:12pt;
+	margin-left:900px;
+	border-radius: 22px 22px 22px 22px;
+	border: 2px solid #5c265c;
+	padding: 5px 8px 5px 8px;
+}
+.updateStockField{
+	width:20%;
+}
+#updateButton{
+	padding:5px 15px; background:#d0d0d0; border:0 none;
+	cursor:pointer;
+	border-radius: 5px;
+	margin-top:4px;
+}
+#deleteButton{
+	padding:5px 15px; background:#d0d0d0; border:0 none;
+	cursor:pointer;
+	border-radius: 5px;
+	margin-top:4px;
+}
+#orderButton{
+	padding:5px 15px;
+	background:#390f39;
+	border:0 none;
+	cursor:pointer;
+	border-radius: 5px;
+	color:white;
+
+}
+.purchaseOrder{
+	width:70%;
+	padding:8px;
+}
+.purchaseOrder label, .purchaseOrder input{
+	margin-top:5px;
+}
+#tableStylize{
+	width:95%;
+	margin-left:26px;
+	border-radius: 7px 7px 7px 7px;
+	border: 2px solid #390f39;
+	
+}
+#imageNbuttonHolder{
+	width:40%;
+	height:450px;
+	float:left;
+	margin-top:10px;
+}
+#sendButton{
+	padding:5px 15px;
+	background:#390f39;
+	border:0 none;
+	cursor:pointer;
+	border-radius: 5px;
+	color:white;
+	margin:10px 0 0 26px;
+}
+.headerButtons{
+	background:#d0d0d0;
+	border:0 none;
+	cursor:pointer;
+	border-radius: 5px;
+	margin-top:4px;
 }

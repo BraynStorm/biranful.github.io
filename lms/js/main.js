@@ -41,12 +41,13 @@ $(document).ready(function(){
 				window.location.href="goods.php?id="+(x[0].substr(6));
 				
 			});
-			
+			//GOODS PRICE MARGIN-TOP
+			$(".goodsPrice").css("margin-top",$(".goodsDescription").height() + 34);
 		}
 		
 	});
 	
-	
+	//$("#purchaseOrderGOODS").css("margin-top"),$(".goodsImages").height() + $(".goodsName").height() + 24 + 60);
     
 
 	//stylize buttons

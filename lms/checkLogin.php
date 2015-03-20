@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	require "dbConfig.php";
 	
 	$adminName=$_POST['username']; 
