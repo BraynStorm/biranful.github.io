@@ -45,7 +45,7 @@ var Mesh = (function (){
 			}
 				
 			
-			texture = textureManager.getTexture(data.material.map_Kd + "f", gl.TEXTURE0);
+			texture = textureManager.getTexture(data.material.map_Kd, gl.TEXTURE0);
 			
 			vbo = Common.bufferData(bufferData);
 			ibo = Common.bufferData(faces, gl.ELEMENT_ARRAY_BUFFER);
